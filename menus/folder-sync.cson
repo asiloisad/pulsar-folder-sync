@@ -1,0 +1,10 @@
+'context-menu':
+  ".tree-view .file .name[data-name='.sync']": [
+    { label: 'Sync Folder', command: 'folder-sync:run' }
+    { label: 'Open Target', command: 'folder-sync:open' }
+    { type: 'separator' }
+  ]
+  '.tree-view .directory': [
+    { label: 'Create .sync', command: 'folder-sync:create' }
+    { type: 'separator' }
+  ]
