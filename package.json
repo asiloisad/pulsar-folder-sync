@@ -1,0 +1,36 @@
+{
+  "name": "folder-sync",
+  "repository": "https://github.com/asiloisad/pulsar-folder-sync",
+  "description": "One-way folder synchronization from tree-view",
+  "keywords": [
+    "sync",
+    "folder",
+    "backup"
+  ],
+  "version": "0.0.0",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.100.0 <2.0.0"
+  },
+  "main": "./lib/main",
+  "configSchema": {
+    "storagePath": {
+      "title": "Storage Path",
+      "description": "Base directory for sync targets. Target path is built as storagePath/name.",
+      "type": "string",
+      "default": ""
+    }
+  },
+  "consumedServices": {
+    "tree-view": {
+      "versions": {
+        "^1.0.0": "consumeTreeView"
+      }
+    },
+    "open-external": {
+      "versions": {
+        "^1.0.0": "consumeOpenExternalService"
+      }
+    }
+  }
+}
